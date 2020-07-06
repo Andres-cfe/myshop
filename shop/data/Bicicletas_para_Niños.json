@@ -1,0 +1,29 @@
+[
+  {
+    "name":"XTC+JR+20",
+    "title":"XTC JR 20",
+    "category":"Bicicletas_para_Niños",
+    "price":7000.75,
+    "description":"Diseñados para entusiasmar a los jóvenes pilotos en los senderos, XtC Jr. 20 y 24 son del tamaño correcto y tienen todas las características correctas. Con un cuadro de aluminio liviano, suspensión delantera, ruedas rápidas de 20 o 24 pulgadas y llantas listas para trail, esta mini bicicleta de montaña está lista para la aventura.",
+    "image":"data/images/NY20XtCJr20_ColorA.jpg",
+    "largeImage":"data/images/NY20XtCJr20_ColorA.jpg"
+  },
+  {
+    "name":"PRE",
+    "title":"PRE",
+    "category":"Bicicletas_para_Niños",
+    "price":3000.05,
+    "description":"La nueva Pre cuenta con un diseño nuevo en su cuadro que no solo hace que rodar sea mas fácil, pero tambien esta hecha para dar un sentimiento mas deportista a los pequeños ciclistas. Hecha con aluminio ALUXX y con innovaciones como el \"Gear On\" que permite poner unos pedales cuando el ciclista esta listo para graduarse de empujar. Esto le da mas tiempo de vida a la Pre.",
+    "image":"data/images/NPre-Girls-Blue.jpg",
+    "largeImage":"data/images/NPre-Girls-Blue.jpg"
+  },
+  {
+    "name":"ANIMATOR+F/W+16",
+    "title":"ANIMATOR F/W 16",
+    "category":"Bicicletas_para_Niños",
+    "price":4000.95,
+    "description":"Disponible con ruedas de 12 o 16 pulgadas y ruedas de entrenamiento extraíbles, esta nueva mini máquina es un boleto rápido para la diversión y la libertad. Animator está diseñado para facilitar la conducción de los niños. Cuenta con un marco de aluminio liviano y duradero, una manivela más corta y un factor Q estrecho para pedalear más fácilmente, y palancas de freno de corto alcance para brindarles una potencia de frenado segura. También tiene una posición de conducción ajustable y una profundidad de inserción más larga para la tija del sillín, lo que facilita el ajuste perfecto para niños de diferentes alturas. Viene con ruedas de entrenamiento extraíbles, por lo que es fácil comenzar y luego pasar a dos ruedas cuando estén listas.",
+    "image":"data/images/NY20AnimatorFW16_ColorA.jpg",
+    "largeImage":"data/images/NY20AnimatorFW16_ColorA.jpg"
+  }
+]

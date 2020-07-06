@@ -1,0 +1,11 @@
+[
+  {
+    "name":"ESCAPE+3",
+    "title":"ESCAPE 3",
+    "category":"Bicicletas_Urbanas",
+    "price":25000.30,
+    "description":"Con un cuadro de aluminio ALUXX, un manejo confiable y ruedas 700C bastante rápidas, Escape te permite rodar cualquier camino con estilo y confort. Es la mejor opción para ese trayecto al trabajo, ponerse en forma o solo salir a divertirse. Esta diseñada con un manubrio recto y una posición más erguida que da seguridad al rodar, simplemente el ajuste perfecto para las calles de la ciudad o caminos remotos. El cuadro cuenta con cableado interno para darle un aspecto mas limpio, incluye monturas para salpicaderas y portabultos así que podrás traer todos los accesorios que necesites.",
+    "image":"data/images/UY20Escape3_ColorA.jpg",
+    "largeImage":"data/images/UY20Escape3_ColorA.jpg"
+  }
+]

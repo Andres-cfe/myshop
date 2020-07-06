@@ -1,0 +1,193 @@
+<link rel="import" href="../bower_components/polymer/polymer-element.html">
+
+<script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-firestore.js"></script>
+
+<dom-module id="shop-category-data">
+
+  <script>
+  (function() {
+
+  // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyCHrbtnwXdVJKRm3eRedHlG7vhU1JjtPAY",
+      authDomain: "polymerfire-b7371.firebaseapp.com",
+      databaseURL: "https://polymerfire-b7371.firebaseio.com",
+      projectId: "polymerfire-b7371",
+      storageBucket: "polymerfire-b7371.appspot.com",
+      messagingSenderId: "568995030786",
+      appId: "1:568995030786:web:59933c8d72ff640b76c41b",
+      measurementId: "G-LN8TK04M2R"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+
+    var db = firebase.firestore();
+    var categoryList = [];
+    var bandera = false;
+    db.collection("categoryList").get().then((querySnapshot) => {
+        querySnapshot.forEach((doc) => {
+            categoryList.push(doc.data());
+        });
+     bandera = true;   
+    });
+
+
+    window.setTimeout(LoadData, 3000);
+/*
+    let categoryList = [
+      {
+        name: 'Bicicleta_de_Montana',
+        title: 'Bicicleta de Montaña',
+        image: 'images/ciclismo-montana.jpg',
+        placeholder: 'data:image/jpeg;base64,/9j/4QAYRXhpZgAASUkqAAgAAAAAAAAAAAAAAP/sABFEdWNreQABAAQAAAAeAAD/7gAOQWRvYmUAZMAAAAAB/9sAhAAQCwsLDAsQDAwQFw8NDxcbFBAQFBsfFxcXFxcfHhcaGhoaFx4eIyUnJSMeLy8zMy8vQEBAQEBAQEBAQEBAQEBAAREPDxETERUSEhUUERQRFBoUFhYUGiYaGhwaGiYwIx4eHh4jMCsuJycnLis1NTAwNTVAQD9AQEBAQEBAQEBAQED/wAARCAADAA4DASIAAhEBAxEB/8QAXAABAQEAAAAAAAAAAAAAAAAAAAIEAQEAAAAAAAAAAAAAAAAAAAACEAAAAwYHAQAAAAAAAAAAAAAAERMBAhIyYhQhkaEDIwUVNREBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8A3dkr5e8tfpwuneJITOzIcmQpit037Bw4mnCVNOpAAQv/2Q=='
+      },
+      {
+        name: 'Bicicleta_de_Ruta',
+        title: 'Bicicleta de Ruta',
+        image: 'images/ladies_outerwear.jpg',
+        placeholder: 'data:image/jpeg;base64,/9j/4QAYRXhpZgAASUkqAAgAAAAAAAAAAAAAAP/sABFEdWNreQABAAQAAAAeAAD/7gAOQWRvYmUAZMAAAAAB/9sAhAAQCwsLDAsQDAwQFw8NDxcbFBAQFBsfFxcXFxcfHhcaGhoaFx4eIyUnJSMeLy8zMy8vQEBAQEBAQEBAQEBAQEBAAREPDxETERUSEhUUERQRFBoUFhYUGiYaGhwaGiYwIx4eHh4jMCsuJycnLis1NTAwNTVAQD9AQEBAQEBAQEBAQED/wAARCAADAA4DASIAAhEBAxEB/8QAWQABAQAAAAAAAAAAAAAAAAAAAAEBAQEAAAAAAAAAAAAAAAAAAAIDEAABAwMFAQAAAAAAAAAAAAARAAEygRIDIlITMwUVEQEBAAAAAAAAAAAAAAAAAAAAQf/aAAwDAQACEQMRAD8Avqn5meQ0kwk1UyclmLtNj7L4PQoioFf/2Q=='
+      },
+      {
+        name: 'Bicicletas_Urbanas',
+        title: 'Bicicletas Urbanas',
+        image: 'images/mens_tshirts.jpg',
+        placeholder: 'data:image/jpeg;base64,/9j/4QAYRXhpZgAASUkqAAgAAAAAAAAAAAAAAP/sABFEdWNreQABAAQAAAAeAAD/7gAOQWRvYmUAZMAAAAAB/9sAhAAQCwsLDAsQDAwQFw8NDxcbFBAQFBsfFxcXFxcfHhcaGhoaFx4eIyUnJSMeLy8zMy8vQEBAQEBAQEBAQEBAQEBAAREPDxETERUSEhUUERQRFBoUFhYUGiYaGhwaGiYwIx4eHh4jMCsuJycnLis1NTAwNTVAQD9AQEBAQEBAQEBAQED/wAARCAADAA4DASIAAhEBAxEB/8QAWwABAQEAAAAAAAAAAAAAAAAAAAMEAQEAAAAAAAAAAAAAAAAAAAAAEAABAwEJAAAAAAAAAAAAAAARAAESEyFhodEygjMUBREAAwAAAAAAAAAAAAAAAAAAAEFC/9oADAMBAAIRAxEAPwDb7kupZU1MTGnvOCgxpvzEXTyRElCmf//Z'
+      },
+      {
+        name: 'Bicicletas_para_Niños',
+        title: 'Bicicletas para Niños',
+        image: 'images/ladies_tshirts.jpg',
+        placeholder: 'data:image/jpeg;base64,/9j/4QAYRXhpZgAASUkqAAgAAAAAAAAAAAAAAP/sABFEdWNreQABAAQAAAAeAAD/7gAOQWRvYmUAZMAAAAAB/9sAhAAQCwsLDAsQDAwQFw8NDxcbFBAQFBsfFxcXFxcfHhcaGhoaFx4eIyUnJSMeLy8zMy8vQEBAQEBAQEBAQEBAQEBAAREPDxETERUSEhUUERQRFBoUFhYUGiYaGhwaGiYwIx4eHh4jMCsuJycnLis1NTAwNTVAQD9AQEBAQEBAQEBAQED/wAARCAADAA4DASIAAhEBAxEB/8QAXwABAQEAAAAAAAAAAAAAAAAAAAMFAQEBAAAAAAAAAAAAAAAAAAABAhAAAQIDCQAAAAAAAAAAAAAAEQABITETYZECEjJCAzMVEQACAwAAAAAAAAAAAAAAAAAAATFBgf/aAAwDAQACEQMRAD8AzeADAZiFc5J7BC9Scek3VrtooilSNaf/2Q=='
+      }
+    ];
+*/
+  function LoadData(){
+
+    class ShopCategoryData extends Polymer.Element {
+
+      static get is() { return 'shop-category-data'; }
+
+      static get properties() { return {
+
+        categoryName: String,
+
+        itemName: String,
+
+        categories: {
+          type: Array,
+          value: categoryList,
+          readOnly: true,
+          notify: true
+        },
+
+        category: {
+          type: Object,
+          computed: '_computeCategory(categoryName)',
+          notify: true
+        },
+
+        item: {
+          type: Object,
+          computed: '_computeItem(category.items, itemName)',
+          notify: true
+        },
+
+        failure: {
+          type: Boolean,
+          notify: true,
+          readOnly: true
+        }
+
+      }}
+      ready(){
+        super.ready();
+        //console.log("Listo:",this.categories);
+      }
+
+      _getCategoryObject(categoryName) {
+        //console.log("Nombre de la categoria:",categoryName);
+        for (let i = 0, c; c = this.categories[i]; ++i) {
+          if (c.name === categoryName) {
+            return c;
+          }
+        }
+      }
+
+      _computeCategory(categoryName) {
+        //console.log("Computed category: ",categoryName);
+        // Fetch the items of the category. Note that the fetch is asynchronous,
+        // which means `category.items` may not be set initially (but that path
+        // will be notified when the fetch completes).
+        let categoryObj = this._getCategoryObject(categoryName);
+        this._fetchItems(categoryObj, 1);
+        return categoryObj;
+      }
+
+      _computeItem(items, itemName) {
+        //console.log("Computed item: ",items,itemName);
+        if (!items || !itemName) {
+          return;
+        }
+        for (let i = 0, item; item = items[i]; ++i) {
+          if (item.name === itemName) {
+            return item;
+          }
+        }
+      }
+
+      _fetchItems(category, attempts) {
+        //console.log("fetch items: ",category,attempts);
+        this._setFailure(false);
+        // Only fetch the items of a category if it has not been previously set.
+        if (!category || category.items) {
+          return;
+        }
+        this._getResource({
+          url: 'data/' + category.name + '.json',
+          onLoad(e) {
+            this.set('category.items', JSON.parse(e.target.responseText));
+          },
+          onError(e) {
+            this._setFailure(true);
+          }
+        }, attempts);
+      }
+
+      _getResource(rq, attempts) {
+        //console.log("Sacar de JSON: ",rq,attempts);
+        let xhr = new XMLHttpRequest();
+        xhr.addEventListener('load', rq.onLoad.bind(this));
+        xhr.addEventListener('error', (e) => {
+          // Flaky connections might fail fetching resources
+          if (attempts > 1) {
+            this._getResourceDebouncer = Polymer.Debouncer.debounce(this._getResourceDebouncer,
+              Polymer.Async.timeOut.after(200), this._getResource.bind(this, rq, attempts - 1));
+          } else {
+            rq.onError.call(this, e);
+          }
+        });
+
+        xhr.open('GET', rq.url);
+        xhr.send();
+      }
+
+      refresh() {
+        //console.log("refresh");
+        if (this.categoryName) {
+          // Try at most 3 times to get the items.
+          this._fetchItems(this._getCategoryObject(this.categoryName), 3);
+        }
+      }
+
+    }
+
+    customElements.define(ShopCategoryData.is, ShopCategoryData);
+
+  }
+
+
+  })();
+  </script>
+
+</dom-module>

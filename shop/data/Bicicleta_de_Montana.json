@@ -1,0 +1,56 @@
+[
+  {
+    "name":"GLORY+ADVANCED+0+2019",
+    "title":"GLORY ADVANCED 0 2019",
+    "category":"Bicicleta_de_Montana",
+    "price":80000.00,
+    "description":"Diseñada con los profesionales de Giant Factory Off Road Team, la Glory Advanced cuenta con un cuadro de alto desempeño que te ayuda a cortar las curvas con sus suspensión que te da la confianza para volar. Su geometría ha ayudado a Marcelo Gutierrez a ganar los podiums mundiales en las pistas mas extramas del DH. Es el cuadro de DH mas ligero que ha producido Giant, esta hecho para ganar.",
+    "image":"data/images/MY19GloryADV0_ColorA.jpg",
+    "largeImage":"data/images/MY19GloryADV0_ColorA.jpg"
+  },
+  {
+    "name":"REIGN+SX+29+2020",
+    "title":"REIGN SX 29 2020",
+    "category":"Bicicleta_de_Montana",
+    "price":78000.00,
+    "description":"Este nuevo 29er de suspensión completa presenta un nuevo conjunto de cuadros ALUXX SL, nuestra última suspensión trasera Maestro y componentes destinados a descensos técnicos.",
+    "image":"data/images/MY20Reign29SX_ColorA.jpg",
+    "largeImage":"data/images/MY20Reign29SX_ColorA.jpg"
+  },
+  {
+    "name":"RINCON+DISCO+2020",
+    "title":"RINCON DISCO 2020",
+    "category":"Bicicleta_de_Montana",
+    "price":32000.00,
+    "description":"Con un cuadro de aluminio ALUXX ligero y duradero y una horquilla de suspensión para suavizar el terreno irregular, Rincon Disc es una gran opción para los nuevos ciclistas de trail.",
+    "image":"data/images/MY20-Rincon-Disc_Metallic-Blue.jpg",
+    "largeImage":"data/images/MY20-Rincon-Disc_Metallic-Blue.jpg"
+  },
+  {
+    "name":"TALON+29+2020",
+    "title":"TALON 29 2020",
+    "category":"Bicicleta_de_Montana",
+    "price":15000.00,
+    "description":"El ligero cuadro de aluminio ALUXX tiene un diseño todoterreno clásico hecho específicamente para ruedas 27.5 para lograr el equilibrio justo entre control y rapidez. El cuadro hardtail esta optimizado para una tijera de 100 mm, que ayuda absorber los impactos en el camino y mejorar el control.",
+    "image":"data/images/MY20Talon291_ColorA.jpg",
+    "largeImage":"data/images/MY20Talon291_ColorA.jpg"
+  },
+  {
+    "name":"TALON+1",
+    "title":"TALON 1",
+    "category":"Bicicleta_de_Montana",
+    "price":15000.00,
+    "description":"Con diseño de aluminio ALUXX del cuadro, esta bici esta diseñada específicamente para llantas 27.5 para darte el balance perfecto entre control y velocidad.",
+    "image":"data/images/MY19Talon1_ColorA.jpg",
+    "largeImage":"data/images/MY19Talon1_ColorA.jpg"
+  },
+    {
+    "name":"XTC+ADVANCED+29+2",
+    "title":"XTC ADVANCED 29 2",
+    "category":"Bicicleta_de_Montana",
+    "price":25000.00,
+    "description":"Con sus ruedas de 29 pulgadas y su ligero cuadro de carbono de grado Advanced, esta bici puede con cualquier pista de XC. El cuadro ha sido diseñado para una suspension de 100 mm y está hecho a mano con un programa específico de laminación del carbono que varía según el tamaño del cuadro para crear la relación rigidez-peso óptima con la cantidad justa de tolerancia vertical. El resultado es una bicicleta que vuela subiendo cuestas empinadas y te da más confianza y control en pistas rápidas y fluidas. Cuenta con la tecnología Boost, lo que mejora la rigidez de las ruedas y admite llantas más anchas, además de una serie de otras características que te permiten ajustar su rendimiento para casi cualquier tipo de terreno.",
+    "image":"data/images/MY20XTCADV292_ColorA.jpg",
+    "largeImage":"data/images/MY20XTCADV292_ColorA.jpg"
+  }
+]

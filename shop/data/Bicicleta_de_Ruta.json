@@ -1,0 +1,29 @@
+[
+  {
+    "name":"PROPEL+ADVANCED+2+DISC",
+    "title":"PROPEL ADVANCED 2 DISC",
+    "category":"Bicicleta_de_Ruta",
+    "price":67000.60,
+    "description":"sta bicicleta aero de ruta minimiza la resistencia para que puedas acelerar y correr más rápido. También ofrece una integración completa del freno de disco para mayor confianza y control en todo tipo de clima y condiciones. Diseñada con la tecnología AeroSystem Shaping y Carbono grado Advanced, ofrece un desempeño aerodinámico comprobado y uno de los cuadros más ligeros de su categoría. La nueva tecnología de freno de disco integrado incluye pinzas de montaje plano y ejes pasantes para una mayor rigidez en las ruedas y un rendimiento optimizado. El poste de asiento Vector de carbono, ligero y de ajuste sencillo, minimiza aún más la resistencia. Todo esto resulta en una máquina lista para la carrera que te ayudará a dejar atrás a la competencia.",
+    "image":"data/images/RY20PropelADV2D_ColorA.jpg",
+    "largeImage":"data/images/RY20PropelADV2D_ColorA.jpg"
+  },
+  {
+    "name":"TCR+ADVANCED+PRO+TEAM+DISC",
+    "title":"TCR ADVANCED PRO TEAM DISC",
+    "category":"Bicicleta_de_Ruta",
+    "price":45000.90,
+    "description":"La TCR Advanced Pro Disc te ofrece el desempeño ultraligero para lograr ese KOM más la confianza de empujar tus limites en los descensos técnicos. Fabricada con un cuadro de carbono grado Advanced, incluyendo monturas planas para integrar frenos de discos delantero y trasero, es una bicicleta de carreras versátil para todo tipo de condiciones. Con su probada geometría Compact Road y tijera OverDrive 2 tiene la mejor relación rigidez-peso de cualquier bicicleta en su categoría. Nuestro sistema tubeless otorga velocidad y eficiencia con una rodada mas suave y la ventaja de reducir el riesgo de ponchaduras. Añade la eficiencia y confort del poste de asiento Variant y tendrás un imbatible desempeño de carreras.",
+    "image":"data/images/RY20TCRADPROTeamD_ColorA.jpg",
+    "largeImage":"data/images/RY20TCRADPROTeamD_ColorA.jpg"
+  },
+  {
+    "name":"PROPEL+ADVANCED+PRO+DISC",
+    "title":"PROPEL ADVANCED PRO DISC",
+    "category":"Bicicleta_de_Ruta",
+    "price":48000.00,
+    "description":"Desarrollada para ofrecer el mejor rendimiento aerodinámico en ruta, esta bicicleta de ruta ofrece una verdadera ventaja para las carreras de velocidad y la conducción. El cuadro está hecho a mano con nuestro compuesto de grado Advanced, produciendo una bicicleta liviana y rígida, con una calidad de conducción ágil y sensible. Sus frenos de disco están completamente integrados dentro del marco utilizando calibradores de montaje plano y ejes pasantes diseñados para optimizar la tecnología. Desde los sprints hasta los ataques, las curvas y los descensos, la nueva Propel Advanced Pro Disc te ayuda a atravesar el viento y obtener una ventaja sobre la competencia.",
+    "image":"data/images/RY19PropelADPROD_ColorA.jpg",
+    "largeImage":"data/images/RY19PropelADPROD_ColorA.jpg"
+  }
+]
